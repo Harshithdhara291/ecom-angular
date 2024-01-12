@@ -8,7 +8,7 @@ import { MatSnackBar,MatSnackBarConfig } from '@angular/material/snack-bar';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-  constructor( private api:ApiService, private snackBar: MatSnackBar ){
+  constructor( private api:ApiService, private _snackBar: MatSnackBar ){
     this.api.searchInput$.subscribe(input => {
       this.searchInput = input;
     });
@@ -25,18 +25,16 @@ export class ProductsComponent {
 
   token:any
 
-  showSnackbar(message: string, config?: MatSnackBarConfig): void {
-    this.snackBar.open(message, 'Close', {
-      duration: 3000,
-      verticalPosition: 'top', 
-      ...config,
+  openSnackBar(message: string,action: string) {
+    this._snackBar.open(message, action,{
+      duration:2000
     });
   }
 
   addToCart(item:any){
     this.token = localStorage.getItem("token");
     if(this.token===null){
-      this.showSnackbar('Please Login to continue')
+      this.openSnackBar('Please Login to continue',"X")
     } else{
       this.api.addItemToCart(item)
     }
