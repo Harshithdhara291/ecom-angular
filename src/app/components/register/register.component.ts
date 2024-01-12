@@ -27,7 +27,15 @@ export class RegisterComponent{
     this.passwordType = this.passwordType === 'password' ? 'text' : 'password';
   }
 
+  signingUp:any = false
+
   submit(register:any) {
+
+    this.signingUp = true
+     setTimeout(()=>{
+      this.signingUp = false
+     },3000)
+
     console.log('form submitted');
     this.http.post<any>(`${this.apiUrl}`, register.value)
       .subscribe(
@@ -38,6 +46,7 @@ export class RegisterComponent{
           }
         },
         error => {
+          console.log(error.error.message)
           this.openSnackBar(error.error.message,"close");
         }
       );

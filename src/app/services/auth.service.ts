@@ -36,6 +36,7 @@ export class AuthService {
           }
         },
         error => {
+          console.log(error.error.message)
           this.openSnackBar(error.error.message,"close")
         }
       );

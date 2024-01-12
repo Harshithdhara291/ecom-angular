@@ -32,7 +32,7 @@
                   <p class="error-msg" *ngIf="pwd.touched&&pwd.errors?.['minlength']" >*password must be 6 characters</p>              
             </div>
             <div>
-                <button class="btn-signin" (click)="loginUser(login)"  >SIGN IN</button>
+                <button class="btn-signin" [disabled]="signingIn" (click)="loginUser(login)"  >{{signingIn ? "SIGNING IN..." : "SIGN IN"}}</button>
                 <p>Don't have an Account? <a class="link"  routerLink="/register">Register Here!</a></p>
             </div>
         </form>

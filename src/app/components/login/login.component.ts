@@ -19,7 +19,13 @@ export class LoginComponent {
     this.passwordType = this.passwordType === 'password' ? 'text' : 'password';
   }
 
+  signingIn:any=false
+
   loginUser(login:any){
+    this.signingIn = true
+     setTimeout(()=>{
+      this.signingIn = false
+     },3000)
     this.auth.isAuthenticated()
     this.auth.submit(login)
   }
