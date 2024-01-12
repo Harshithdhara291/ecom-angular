@@ -1,0 +1,94 @@
+<div class="home-container-main">
+    <div class="category-section">
+        <ul>
+            <li *ngFor="let item of categories">
+                <img src="{{item.categoryImage}}" class="cate-image-pro" alt="not found" />
+                <h3 ><a href="#{{item.categoryName}}" >{{item.categoryName}}</a></h3>
+            </li>
+        </ul>
+    </div>
+    <div class="corousel-section">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+            </div>
+            <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/5cf343a6-35d2-4fdf-ba6c-65b9f0ecaa0a.png" class="corousel-img" alt="not found">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://tippie.uiowa.edu/sites/tippie.uiowa.edu/files/2022-06/linkedinheaders-desktop.jpg" class="corousel-img" alt="not found">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://freelinkedinbackgrounds.com/wp-content/uploads/2015/01/Technology-001.jpg" class="corousel-img" alt="not found">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://marketplace.canva.com/EAE2cQaUHVA/1/0/1600w/canva-black-minimal-motivation-quote-linkedin-banner-HoRi-2buBWk.jpg" class="corousel-img" alt="not found">
+            </div>    
+        </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="categories-section" id="Grecory" >
+        <h3>Best of Grocery</h3>
+        <ul>
+            <li *ngFor="let item of grocery">
+                <img src="{{item.image}}" class="image-pro" alt="not found" />
+                <h4>{{item.title}}</h4>
+                <p>From {{item.price}}$</p>
+            </li>
+        </ul>
+    </div>
+    <div class="categories-section" id="Clothing">
+        <h3>Best of Clothing</h3>
+        <ul>
+            <li *ngFor="let item of clothing">
+                <img src="{{item.image}}" class="image-pro" alt="not found" />
+                <h4>{{item.title}}</h4>
+                <p>From {{item.price}}$</p>
+            </li>
+        </ul>
+    </div>
+    <div class="categories-section" id="Electronics">
+        <h3>Best of Electronics</h3>
+        <ul>
+            <li *ngFor="let item of electronics">
+                <img src="{{item.image}}" class="image-pro" alt="not found" />
+                <h4>{{item.title}}</h4>
+                <p>From {{item.price}}$</p>
+            </li>
+        </ul>
+    </div>
+    <div class="categories-section" id="Sports & Outdoors">
+        <h3>Best of Sports and outdoor</h3>
+        <ul>
+            <li *ngFor="let item of sports">
+                <img src="{{item.image}}" class="image-pro" alt="not found" />
+                <h4>{{item.title}}</h4>
+                <p>From {{item.price}}$</p>
+            </li>
+        </ul>
+    </div>
+    <div class="categories-section" id="Home & Kitchen">
+        <h3>Best of Home & Kitchen</h3>
+        <ul>
+            <li *ngFor="let item of homekitchen">
+                <img src="{{item.image}}" class="image-pro" alt="not found" />
+                <h4>{{item.title}}</h4>
+                <p>From {{item.price}}$</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,168 @@
+.cart-container{
+    /* padding: 3rem; */
+    background-color: rgb(246, 247, 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 78vh;
+}
+.card-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 3rem 0 3rem 0;
+    min-height: 88vh;
+}
+.card-item{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    /* padding: 3rem; */
+}
+
+.img-desp-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+
+.img-desp-cont div {
+    padding: 1rem;
+}
+.quantity-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    height: 6rem;
+}
+
+.quantity-cont div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60%;
+}
+
+.item-total-para{
+    margin: 0px;
+}
+
+.card-item img{
+    height: 5rem;
+    width: 5rem;
+}
+
+.name{
+    max-width: 15rem;
+    overflow-x: hidden;
+}
+
+.quantity-cont button{
+    border: 1px solid rgb(0, 13, 201);
+    background-color: aliceblue;
+     cursor: pointer;
+}
+
+.quantity{
+    margin: 0px;
+}
+
+.total-cont{
+    border: 1px solid rgb(240, 240, 241);
+    border-radius: 6px;
+    align-self: flex-end;
+    margin-right: 8rem;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.empty-cart-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 88vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+.empty-cart-cont img{
+    height: 25rem;
+    width: 35rem;
+}
+
+.empty-cart-cont h3{
+    color: rgb(68, 114, 153);
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+span{
+    color: red;
+}
+a{
+    text-decoration: none;
+}
+
+@media (max-width:767px) {
+    .card-item{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        margin-bottom: 2rem;
+        /* padding: 3rem; */
+    }
+    .img-desp-cont{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+    .name{
+        font-size: .8rem;
+        margin: 0px;
+        max-width: 12rem;
+        overflow: hidden;
+    }
+    .img-desp-cont div {
+        padding: 10px;
+    }
+    .img-desp-cont div p{
+        margin: 0px;
+    }
+    .quantity-cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 90%;
+        height: 6rem;
+    }
+    .empty-cart-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: center;
+        height: 88vh;
+        width: 100%;
+        background-color: #fff;
+    }
+    .empty-cart-cont img{
+        height: 45%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+footer {
+    background-color: #202021;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Footer links */
+  footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  /* Social media icons */
+  .social-icons {
+    margin-top: 10px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  /* Copyright notice */
+  .copyright {
+    margin-top: 10px;
+    font-size: 12px;
+  }

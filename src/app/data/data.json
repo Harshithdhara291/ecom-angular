@@ -1,0 +1,355 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "categoryImage": "https://img.freepik.com/free-vector/shopping-supermarket-cart-with-grocery-pictogram_1284-11697.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "categoryName": "Grecory"
+          },
+      {
+        "id": 1,
+        "categoryImage": "https://img.freepik.com/free-photo/technology-electronic-devices_144627-10803.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+        "categoryName": "Electronics"
+      },
+      {
+        "id": 2,
+        "categoryImage": "https://img.freepik.com/free-photo/elegance-color-apparel-clothes-clothing_1203-6544.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+        "categoryName": "Clothing"
+      },
+      {
+        "id": 3,
+        "categoryImage": "https://img.freepik.com/free-vector/realistic-kitchenware-elements-set-with-colorful-cups-teapot-spoons-forks-saucepan-plates-napkin-holder-salt-pepper-shakers_1284-50839.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+        "categoryName": "Home & Kitchen"
+      },
+      {
+        "id": 4,
+        "categoryImage": "https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+        "categoryName": "Books"
+      },
+      {
+        "id": 5,
+        "categoryImage": "https://img.freepik.com/premium-photo/sports-bag-with-sports-equipment-isolated-white-with-clipping-path_105428-2579.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+        "categoryName": "Sports & Outdoors"
+      },
+      {
+        "id": 6,
+        "categoryImage": "https://img.freepik.com/free-psd/plane-mockup_1310-1053.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+        "categoryName": "Travel"
+      },
+      {
+        "id": 7,
+        "categoryImage": "https://img.freepik.com/free-vector/transport-types-illustrations-set-passenger-car-motorcycle-city-bus-helicopter-plane-rocket_575670-507.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+        "categoryName": "Vehicles"
+      }
+    ],
+    "grocery" : [
+        {
+            "id":1,
+            "image":"https://img.freepik.com/free-vector/almond-flour-vector-realistic-package-product-placement-mock-up-detailed-label-designs_1268-18100.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Almond Flour",
+            "price":1299
+        },
+        {
+            "id":2,
+            "image":"https://img.freepik.com/free-vector/red-plastic-bag_1284-34787.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Sambar Masala",
+            "price":499
+        },
+        {
+            "id":3,
+            "image":"https://img.freepik.com/free-vector/preserved-natural-green-beans-plastic-package-valuable-protein-source-healthy-food-close-up-realistic-image-vector-illustration_1284-30350.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Green Beans",
+            "price":199
+        },
+        {
+            "id":4,
+            "image":"https://img.freepik.com/free-psd/food-packaging-mockup_1310-788.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Cashew Pouch",
+            "price":1299
+        },
+        {
+            "id":5,
+            "image":"https://img.freepik.com/free-photo/raisins-dried_1368-9149.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Raisins",
+            "price":599
+        },
+        {
+            "id":6,
+            "image":"https://img.freepik.com/premium-vector/freeze-dried-apple-slice-package-cartoon-vector-illustration-isolated-object_311865-10254.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Apple Slice",
+            "price":459
+        },
+        {
+            "id":7,
+            "image":"https://img.freepik.com/free-vector/realistic-milk-boxes-isolated_1284-35984.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Milk Packet",
+            "price":199
+        },
+        {
+            "id":8,
+            "image":"https://img.freepik.com/free-vector/realistic-colorful-tea_52683-32222.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Tea Packets",
+            "price":99
+        },
+        {
+            "id":9,
+            "image":"https://img.freepik.com/free-vector/set-realistic-packaging-wet-wipes-with-green-tea-lotus-flower-isolated-illustration_1284-28312.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Green Teap Wet",
+            "price":299
+        },
+        {
+            "id":10,
+            "image":"https://img.freepik.com/free-vector/vector-blank-sealed-foil-plastic-bags-full-shelled-walnuts-almonds-side-view-isolated-white-background_1284-46330.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Walnut Packet",
+            "price":499
+        }
+        
+    ],
+    "electronics":[
+        {
+            "id":1,
+            "image":"https://img.freepik.com/free-vector/black-flash-drive-isolated-white-usb-hardware-information-memory-transfer-technology-storage-electronic-portable-connect_1284-42055.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"SD Card",
+            "price":1999
+        },
+        {
+            "id":2,
+            "image":"https://img.freepik.com/free-photo/printer-with-white-sheets_1232-569.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Printer",
+            "price":3999
+        },
+        {
+            "id":3,
+            "image":"https://img.freepik.com/free-vector/white-usb-types-port-plug-cables-set-with-realistic-images-connectors-with-text-captions-vector-illustration_1284-73530.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"USB Gadgets",
+            "price":257
+        },
+        {
+            "id":4,
+            "image":"https://img.freepik.com/free-photo/wireless-mouse-keyboard_1260-15.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"KeyBoards",
+            "price":359
+        },
+        {
+            "id":5,
+            "image":"https://img.freepik.com/free-vector/computer-design_1156-101.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Monitors",
+            "price":9999
+        },
+        {
+            "id":6,
+            "image":"https://img.freepik.com/free-vector/powerbank-battery-charger-realistic-icons-set-with-black-silver-devices-isolated-vector-illustration_1284-81780.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"power Banks",
+            "price":999
+        },
+        {
+            "id":7,
+            "image":"https://img.freepik.com/free-photo/wan-wlan-technology-connection-computers_1232-4122.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"WireLess Routers",
+            "price":1250
+        },
+        {
+            "id":8,
+            "image":"https://img.freepik.com/free-psd/camera-mockup_1310-717.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Cameras",
+            "price":24000
+        },
+        {
+            "id":9,
+            "image":"https://img.freepik.com/free-photo/still-life-tech-device_23-2150722616.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Speakers",
+            "price":4999
+        },
+        {
+            "id":10,
+            "image":"https://img.freepik.com/free-vector/headphones-wireless-realistic-composition-with-isolated-image-phones-with-power-bank-dock-station-with-reflections-vector-illustration_1284-73201.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"EarPods",
+            "price":1799
+        }
+    ],
+    "clothing":[
+        {
+            "id":1,
+            "image":"https://img.freepik.com/free-photo/stylish-golden-watch-white-surface_181624-27078.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Wrist Watch",
+            "price":1099
+        },
+        {
+            "id":2,
+            "image":"https://img.freepik.com/free-photo/pair-trainers_144627-3799.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Men's Casual Shoes",
+            "price":3099
+        },
+        {
+            "id":3,
+            "image":"https://img.freepik.com/premium-photo/men-s-tshirts-mockup-design-templatemockup_236836-22078.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Men Sweatshirt",
+            "price":899
+        },
+        {
+            "id":4,
+            "image":"https://img.freepik.com/free-photo/portrait-young-handsome-model-man-dressed-gray-casual-hoodie-clothes-posing-white-wall-isolated_158538-6988.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Men Hoodies",
+            "price":1099
+        },
+        {
+            "id":5,
+            "image":"https://img.freepik.com/free-photo/jewelry-gold-ring-isolated-white-background_123827-27690.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "title":"Bangles for Women",
+            "price":899
+        },
+        {
+            "id":6,
+            "image":"https://img.freepik.com/free-photo/shirt_1203-8194.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Men casual Shirts",
+            "price":877
+        },
+        {
+            "id":7,
+            "image":"https://img.freepik.com/free-photo/portrait-young-attractive-man-leather-jacket_171337-9590.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Men's Jackets",
+            "price":990
+        },
+        {
+            "id":8,
+            "image":"https://img.freepik.com/premium-vector/south-indian-young-woman-holding-traditional-dish-rice-standing-pose_1302-31051.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Sarees",
+            "price":998
+        },
+        {
+            "id":9,
+            "image":"https://img.freepik.com/free-photo/pretty-woman-with-golden-nails-beautiful-gold-jewelry-isolated-white-wall_186202-8035.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Women Bracelets",
+            "price":344
+        },
+        {
+            "id":10,
+            "image":"https://img.freepik.com/free-photo/beautiful-luxury-necklace-jewelry-stand-neck_1339-7946.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "title":"Necklace",
+            "price":1999
+        }
+    ],
+    "sports":[
+        {
+            "id":1,
+            "image":"https://img.freepik.com/premium-vector/cricket-bat-ball-vector-illustration_110233-82.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Cricket Bat Ball",
+            "price":1909
+        },
+        {
+            "id":2,
+            "image":"https://img.freepik.com/premium-vector/realistic-badminton-racquet-with-shuttlecock_208581-1330.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "title":"Shuttle Bat",
+            "price":339
+        },
+        {
+            "id":3,
+            "image":"https://img.freepik.com/free-vector/iron-golf-club_78370-502.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Hockey Stick",
+            "price":599
+        },
+        {
+            "id":4,
+            "image":"https://img.freepik.com/free-vector/vector-pair-blue-warm-sport-winter-gloves-isolated-white-background_1284-46693.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Sport Gloves",
+            "price":599
+        },
+        {
+            "id":5,
+            "image":"https://img.freepik.com/free-vector/vector-isolated-realistic-soccer-ball-white_1284-41932.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "title":"Football",
+            "price":699
+        },
+        {
+            "id":6,
+            "image":"https://img.freepik.com/free-photo/triathlon-male-athlete-cycle-training-isolated-white_155003-42571.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Bicycle sport",
+            "price":5199
+        },
+        {
+            "id":7,
+            "image":"https://img.freepik.com/free-vector/realistic-vector-icon-roller-skates-isolated-white-background_134830-1462.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Sport Skating Shoe",
+            "price":1699
+        },
+        {
+            "id":8,
+            "image":"https://img.freepik.com/premium-vector/exercise-bike-bicycle-with-monitor-handles_169241-1992.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Abscent Cycle",
+            "price":2199
+        },
+        {
+            "id":9,
+            "image":"https://img.freepik.com/premium-vector/3d-rugby-ball-isolated-vector_951778-5846.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=sph",
+            "title":"VolleyBall",
+            "price":199
+        },
+        {
+            "id":10,
+            "image":"https://img.freepik.com/premium-photo/different-tools-sport-isolated-white_392895-355252.jpg?size=626&ext=jpg&uid=R133573760&ga=GA1.1.1701308307.1704781856&semt=ais",
+            "title":"Sport kit mini",
+            "price":1099
+        }
+    ],
+    "homekitchen":[
+        {
+            "id":1,
+            "image":"https://img.freepik.com/free-photo/blue-alarm-clock-white-background_1112-483.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Clocks",
+            "price":1259
+        },
+        {
+            "id":2,
+            "image":"https://img.freepik.com/free-photo/kitchen-utensil_144627-32228.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"Bowels",
+            "price":147
+        },
+        {
+            "id":3,
+            "image":"https://img.freepik.com/free-photo/room-interior-design_23-2148899488.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"Home Decors",
+            "price":1700
+        },
+        {
+            "id":4,
+            "image":"https://img.freepik.com/free-vector/kitchen-appliance-gas-cooking-surface-cooktop_134830-659.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Stoves",
+            "price":3599
+        },
+        {
+            "id":5,
+            "image":"https://img.freepik.com/free-vector/spoon-fork-3d-illustration-isolated-realistic-set-silver-metal-tableware_33099-502.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Spoones",
+            "price":49
+        },
+        {
+            "id":6,
+            "image":"https://img.freepik.com/free-photo/ceiling-fan-top-room-decoration_74190-8425.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Fans",
+            "price": 5999
+        },
+        {
+            "id":7,
+            "image":"https://img.freepik.com/free-photo/gray-sofa-white-living-room-with-copy-space_43614-909.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"furniture",
+            "price":7699
+        },
+        {
+            "id":8,
+            "image":"https://img.freepik.com/free-psd/elegant-bedroom-hotel-room-with-classic-furniture_176382-189.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Beds",
+            "price":15999
+        },
+        {
+            "id":9,
+            "image":"https://img.freepik.com/free-photo/light-lamp-decoration-interior-room_74190-11946.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=ais",
+            "title":"Lights",
+            "price": 3249
+        },
+        {
+            "id":10,
+            "image":"https://img.freepik.com/free-vector/wicker-hanging-chairs-swing-hanging-chain-with-cushions_1284-45541.jpg?size=626&ext=jpg&ga=GA1.1.1926719645.1704453292&semt=sph",
+            "title":"Chairs",
+            "price":3599
+        }
+    ]
+  }
