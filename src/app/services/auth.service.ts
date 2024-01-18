@@ -2,6 +2,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
 import { MatSnackBar,MatSnackBarConfig } from '@angular/material/snack-bar';
+import { Observable,BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -14,12 +15,22 @@ export class AuthService {
   }
   
   private tokenKey = 'token';
-  private apiUrl = 'https://shopify-x81t.onrender.com/login';
+  // private apiUrl = 'https://shopify-x81t.onrender.com/login'; harshith.d@abilioit.com
+  // private apiUrl = 'https://shopify-backend-ah7e.onrender.com/login'
+
+  private apiUrl = 'https://shopify-backend-ah7e.onrender.com/login';
 
   openSnackBar(message: string,action: string) {
     this._snackBar.open(message, action,{
-      duration:2000
+      duration:3000,
     });
+  }
+
+  private booleanSubject = new BehaviorSubject<boolean>(false);
+  boolean$ = this.booleanSubject.asObservable();
+
+  setBooleanValue(value: boolean): void {
+    this.booleanSubject.next(value);
   }
 
   submit(login:any) {
@@ -30,7 +41,9 @@ export class AuthService {
         response => {
           if(response.status===200){
             this.openSnackBar(response.message,"close");
-            console.log(response.token)
+            this.setBooleanValue(false);
+            console.log(response)
+            localStorage.setItem("userId",response.exists._id);
             localStorage.setItem(this.tokenKey,response.token);
             this.router.navigate(['/products']);            
           }
@@ -38,12 +51,12 @@ export class AuthService {
         error => {
           console.log(error.error.message)
           this.openSnackBar(error.error.message,"close")
+          this.setBooleanValue(false);
         }
       );
   }
 
   logout(): void {
-    // Simulated logout logic
     localStorage.removeItem(this.tokenKey);
   }
 

@@ -7,23 +7,23 @@
                 <img src="{{item.image}}" alt="not found" />
                 <div>
                 <h4 class="name"><strong>{{item.title}}</strong></h4>
-                <p><strong>price : {{item.price}}$</strong></p>
+                <p><strong>price : ₹{{item.price}}</strong></p>
             </div>
             </div>
             <div class="quantity-cont">
                 <div>
-                    <button (click)="changeQuant('dec',item.id)" >-</button>
+                    <button (click)="changeQuant('dec',item._id)" >-</button>
                     <p class="quantity">{{item.quantity}}</p>
-                    <button  (click)="changeQuant('inc',item.id)">+</button>
+                    <button  (click)="changeQuant('inc',item._id)">+</button>
                 </div>
                 <div>
-                    <p class="item-total-para"><strong>Item Total : {{item.quantity*item.price}} $</strong></p>
+                    <p class="item-total-para"><strong>Item Total : ₹{{item.quantity*item.price}}</strong></p>
                 </div>
             </div>
-            <button mat-raised-button color="warn" (click)="removeFromCart(item.id)" >Remove</button>
+            <button mat-raised-button color="warn" (click)="removeFromCart(item._id)" >Remove</button>
         </mat-card>
         <mat-card class="total-cont">
-            <h3><b>Grand Total : {{total}} $</b></h3>
+            <h3><b>Grand Total : ₹{{total}}</b></h3>
             <button mat-raised-button color="primary">Proceed to Buy</button>
         </mat-card>
     </div>

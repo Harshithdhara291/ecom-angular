@@ -20,7 +20,9 @@ export class RegisterComponent{
     });
   }
 
-  private apiUrl = 'https://shopify-x81t.onrender.com/register';
+  // private apiUrl = 'https://shopify-x81t.onrender.com/register'; harshith.d@abilioit
+  // private apiUrl = 'https://shopify-backend-ah7e.onrender.com/register'
+  private apiUrl = 'https://shopify-backend-ah7e.onrender.com/register'
   passwordType:any = 'password';
 
   showHidePassword(){
@@ -32,29 +34,23 @@ export class RegisterComponent{
   submit(register:any) {
 
     this.signingUp = true
-     setTimeout(()=>{
-      this.signingUp = false
-     },3000)
-
+    
     console.log('form submitted');
     this.http.post<any>(`${this.apiUrl}`, register.value)
       .subscribe(
         response => {
           if(response.status===200){
             this.openSnackBar(response.message,"close");
+            this.signingUp = false
             this.router.navigate(['/login']);
           }
         },
         error => {
           console.log(error.error.message)
           this.openSnackBar(error.error.message,"close");
+          this.signingUp = false
         }
       );
-      // this.registerForm.setValue({
-      //   username:"",
-      //   email:"",
-      //   password:""
-      // })
   }
 
 }

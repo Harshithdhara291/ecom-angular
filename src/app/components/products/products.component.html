@@ -18,13 +18,13 @@
             <h3>{{item.title}}</h3>
             <p class="description">{{item.description}}</p>
             <div>
-                <p class="rating"><b>Rating : {{item.rating.rate}}⭐</b></p>
-                <p class="price-para"><b>Price : {{item.price}} $</b></p>
+                <p class="rating"><b>Rating : {{item.rating}}⭐</b></p>
+                <p class="price-para"><b>Price : ₹{{item.price}}</b></p>
             </div>
             <button mat-raised-button color="primary" (click)="addToCart(item)" >Add to Cart</button>
         </mat-card>
     </ng-template>
-        <ng-template #loader><mat-progress-bar mode="indeterminate" style="width:84%; margin-left:7rem"></mat-progress-bar></ng-template>
+        <ng-template #loader><mat-progress-bar mode="indeterminate" class="loader"></mat-progress-bar></ng-template>
         <div *ngIf="searchedProductsList.length===0 && searchInput!=='' then noresult"></div>
         <ng-template #noresult>
             <h3 class="nores-head">No Results Found !!</h3>

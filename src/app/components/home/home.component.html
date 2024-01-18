@@ -2,8 +2,8 @@
     <div class="category-section">
         <ul>
             <li *ngFor="let item of categories">
-                <img src="{{item.categoryImage}}" class="cate-image-pro" alt="not found" />
-                <h3 ><a href="#{{item.categoryName}}" >{{item.categoryName}}</a></h3>
+                <a href="#{{item.categoryName}}" ><img src="{{item.categoryImage}}" class="cate-image-pro" alt="not found"  />
+                <h3 >{{item.categoryName}}</h3></a>
             </li>
         </ul>
     </div>

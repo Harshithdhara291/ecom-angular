@@ -11,8 +11,19 @@ export class ApiService {
   constructor(private http:HttpClient,private _snackBar: MatSnackBar) { }
 
   fetchData(): Observable<any> {
-    return  this.http.get<any>('https://fakestoreapi.com/products');
+    return  this.http.get<any>('https://shopify-backend-ah7e.onrender.com/products');
   }
+
+  userId:any = localStorage.getItem("userId")
+
+  getCartItemsArray() : Observable<any> {
+    return  this.http.get<any>(`https://shopify-backend-ah7e.onrender.com/myCart/${this.userId}`);
+  }
+
+  // addItemToCart(itemId:any): Observable<any> {
+  //   return  this.http.post<any>(`http://localhost:8000/addtocart/${this.userId}`,itemId);
+  // }
+
 
   // showSnackbar(message: string, config?: MatSnackBarConfig): void {
   //   this.snackBar.open(message, 'Close', {
@@ -50,22 +61,10 @@ export class ApiService {
     return this.cartItems.asObservable();
   }
 
-  addItemToCart(item: any) {
-    const currentCart = this.cartItems.value;
-    // console.log(currentCart,'curr cart in service')
-    let newItem = {...item,quantity:1}
-    let addItem = (currentCart.find((ci:any)=>ci.id=== newItem.id)) 
-    if(addItem===undefined){
-      this.cartItems.next([...currentCart, newItem]);
-      this.openSnackBar('Item added to cart!','close');
-    } else{
-      alert('Item already added to cart')
-    }
-  }
-
+  
   removeItemFromCart(itemId: string) {
     const currentCart = this.cartItems.value;
-    const updatedCart = currentCart.filter((item: any) => item.id !== itemId);
+    const updatedCart = currentCart.filter((item: any) => item._id !== itemId);
     this.cartItems.next(updatedCart);
   }
 

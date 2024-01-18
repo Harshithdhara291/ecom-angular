@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -7,9 +7,15 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.css']
 })
 
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   constructor(private auth: AuthService) { }
+
+  ngOnInit(): void {
+    this.auth.boolean$.subscribe(value => {
+      this.signingIn = value;
+    });
+  }
 
   // @ViewChild('register') registerForm:any;
 
@@ -23,9 +29,6 @@ export class LoginComponent {
 
   loginUser(login:any){
     this.signingIn = true
-     setTimeout(()=>{
-      this.signingIn = false
-     },3000)
     this.auth.isAuthenticated()
     this.auth.submit(login)
   }

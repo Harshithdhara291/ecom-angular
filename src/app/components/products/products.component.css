@@ -93,6 +93,11 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.loader{
+    width:84%; 
+    margin-left:7rem;
+}
+
 @media (max-width:991px) {
     .products-container{
         background-color: rgb(241,243,245);
@@ -152,4 +157,9 @@
     b{
         font-size: .7rem ;
     }
+    .loader{
+        width:84%; 
+        margin-left:0rem;
+    }
 }
+
