@@ -21,8 +21,8 @@ export class RegisterComponent{
   }
 
   // private apiUrl = 'https://shopify-x81t.onrender.com/register'; harshith.d@abilioit
-  // private apiUrl = 'https://shopify-backend-ah7e.onrender.com/register'
   private apiUrl = 'https://shopify-backend-ah7e.onrender.com/register'
+  // private apiUrl = 'http://localhost:8000/register'
   passwordType:any = 'password';
 
   showHidePassword(){

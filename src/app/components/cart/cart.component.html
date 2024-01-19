@@ -1,39 +1,43 @@
 <div class="cart-container">
-    <div *ngIf="cart.length>0; then cartItems; else emptyCartView"></div>
-    <ng-template #cartItems>
-        <div class="card-items">
-        <mat-card *ngFor="let item of cart" class="card-item" >
-            <div class="img-desp-cont">
-                <img src="{{item.image}}" alt="not found" />
-                <div>
-                <h4 class="name"><strong>{{item.title}}</strong></h4>
-                <p><strong>price : ₹{{item.price}}</strong></p>
-            </div>
-            </div>
-            <div class="quantity-cont">
-                <div>
-                    <button (click)="changeQuant('dec',item._id)" >-</button>
-                    <p class="quantity">{{item.quantity}}</p>
-                    <button  (click)="changeQuant('inc',item._id)">+</button>
+    <div *ngIf="loading; then loader else content"></div>
+    <ng-template #loader><mat-progress-bar mode="indeterminate" class="loader"></mat-progress-bar></ng-template>
+    <ng-template #content>
+        <div *ngIf="cart.length>0; then cartItems; else emptyCartView"></div>
+        <ng-template #cartItems>
+            <div class="card-items">
+            <mat-card *ngFor="let item of cart" class="card-item" >
+                <div class="img-desp-cont">
+                    <img src="{{item.image}}" alt="not found" />
+                    <div>
+                    <h4 class="name"><strong>{{item.title}}</strong></h4>
+                    <p><strong>price : ₹{{item.price}}</strong></p>
                 </div>
-                <div>
-                    <p class="item-total-para"><strong>Item Total : ₹{{item.quantity*item.price}}</strong></p>
                 </div>
-            </div>
-            <button mat-raised-button color="warn" (click)="removeFromCart(item._id)" >Remove</button>
-        </mat-card>
-        <mat-card class="total-cont">
-            <h3><b>Grand Total : ₹{{total}}</b></h3>
-            <button mat-raised-button color="primary">Proceed to Buy</button>
-        </mat-card>
-    </div>
-    </ng-template>
-    <ng-template #emptyCartView>
-        <div class="empty-cart-cont">
-            <img src="https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg" alt="not found" />
-            <h3>Your cart is <span>empty!</span></h3>
-            <a routerLink="/products"><button mat-stroked-button color="primary">Add some Items</button></a>
-            
+                <div class="quantity-cont">
+                    <div>
+                        <button (click)="changeQuant('dec',item._id)" >-</button>
+                        <p class="quantity">{{item.quantity}}</p>
+                        <button  (click)="changeQuant('inc',item._id)">+</button>
+                    </div>
+                    <div>
+                        <p class="item-total-para"><strong>Item Total : ₹{{item.quantity*item.price}}</strong></p>
+                    </div>
+                </div>
+                <button mat-raised-button color="warn" (click)="removeFromCart(item._id)" >Remove</button>
+            </mat-card>
+            <mat-card class="total-cont">
+                <h3><b>Grand Total : ₹{{total}}</b></h3>
+                <button mat-raised-button color="primary">Proceed to Buy</button>
+            </mat-card>
         </div>
+        </ng-template>
+        <ng-template #emptyCartView>
+            <div class="empty-cart-cont">
+                <img src="https://static.vecteezy.com/system/resources/previews/016/462/240/non_2x/empty-shopping-cart-illustration-concept-on-white-background-vector.jpg" alt="not found" />
+                <h3>Your cart is <span>empty!</span></h3>
+                <a routerLink="/products"><button mat-stroked-button color="primary">Add some Items</button></a>
+                
+            </div>
+        </ng-template>
     </ng-template>
 </div>

@@ -8,61 +8,45 @@ import { HttpClient } from '@angular/common/http'
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  constructor(private http: HttpClient, private cartService: ApiService) { 
-  }
+  constructor(private http: HttpClient, private cartService: ApiService) {}
 
   cart: any = [];
   total = 0;
-
-  roundToTwoDecimalPlaces(value: number): number {
-    return Number(value.toFixed(2));
-  }
+  loading:boolean=true
 
   ngOnInit(): void {
-      this.getCart()
-      this.totalPriceCal();
-  }
-
-  // ngDoCheck(): void {
-  //     this.getCart()
-  // }
-
-  getCart(){
-    this.cartService.getCartItemsArray().subscribe((items) => {
-      items.forEach((obj: any) => {
-        obj["quantity"] = 1;
+    this.cartService.fetchCartItems()
+      this.cartService.cart$.subscribe(cartItems => {
+        console.log(cartItems,"cart items")
+        this.cart = cartItems;
+        this.total=0
+        this.cart.forEach((obj: any) => {
+          obj["quantity"] = 1;
+          this.total+=obj.quantity*obj.price
+        });
       });
 
-      this.cart = items;
-      console.log(this.cart, "cart items");
-    });
+    
+    setTimeout(()=>{
+      this.loading=false
+    },1000)
   }
 
   totalPriceCal() {
+    console.log("tpc called")
     this.total = 0;
     this.cart.forEach((each: any) => {
       this.total += each.price * each.quantity;
-      this.total = Number(this.total.toFixed(2));
     });
-    // return Number(this.total.toFixed(2));
   }
 
-  userId: any
-
   removeFromCart(itemId: any) {
-    this.userId = localStorage.getItem("userId");
-
-    this.http.delete<any>(`https://shopify-backend-ah7e.onrender.com/removefromcart/${this.userId}/${itemId}`)
-      .subscribe(
-        response => {
-            console.log(response.message)
-        },
-        error => {
-          console.log(error.error)
-        }
-      );
-    // this.getCart()
-    this.totalPriceCal()
+    this.cartService.removeItemFromCart(itemId)
+    this.cartService.fetchCartItems()
+    this.total = 0;
+    this.cart.forEach((each: any) => {
+      this.total += each.price * each.quantity;
+    });
   }
 
   changeQuant(param: string, id: number) {

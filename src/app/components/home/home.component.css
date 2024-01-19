@@ -21,13 +21,16 @@
 }
 
 .category-section ul li{
-    /* border: 1px solid red; */
+    margin-right: 1.6rem;
+    cursor: pointer;
+}
+
+.category-section ul li a{
+    text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-right: 1.6rem;
-    cursor: pointer;
 }
 
 .category-section ul li img{
@@ -36,7 +39,7 @@
     border-radius: 5px;
 }
 
-.category-section ul li h3 a{
+.category-section ul li h3{
     text-decoration: none;
     margin: 0px;
     margin-top: 15px;

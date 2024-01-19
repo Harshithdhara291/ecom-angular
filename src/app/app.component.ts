@@ -25,12 +25,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cartService.getCartItems().subscribe(items => {
-      this.cart = items;
-      this.itemsCount=this.cart.length;
-      console.log(this.cart.length,);
-    });
-
+    // this.cartService.getCartItems().subscribe(items => {
+    //   this.cart = items;
+    //   this.itemsCount=this.cart.length;
+    //   console.log(this.cart.length,);
+    // });
+    
     this.cartService.fetchData().subscribe({
       next: (response => {
         this.productsList = response;

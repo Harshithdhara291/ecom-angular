@@ -16,9 +16,9 @@ export class AuthService {
   
   private tokenKey = 'token';
   // private apiUrl = 'https://shopify-x81t.onrender.com/login'; harshith.d@abilioit.com
-  // private apiUrl = 'https://shopify-backend-ah7e.onrender.com/login'
 
-  private apiUrl = 'https://shopify-backend-ah7e.onrender.com/login';
+  private apiUrl = 'https://shopify-backend-ah7e.onrender.com/login'
+  // private apiUrl = 'http://localhost:8000/login';
 
   openSnackBar(message: string,action: string) {
     this._snackBar.open(message, action,{
