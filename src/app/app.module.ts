@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InputComponent } from './components/input/input.component';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -24,10 +23,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { OrderComponent } from './components/order/order.component';
+import { DatePipe } from '@angular/common';
+
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
     ProductsComponent,
     CartComponent,
     LoginComponent,
@@ -35,6 +37,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     FooterComponent,
     DialogComponent,
+    NotfoundComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +56,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatDialogModule,
     MatSnackBarModule
     ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

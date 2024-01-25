@@ -16,7 +16,6 @@
     justify-content: flex-end;
     align-items: center;
     background-color: rgb(241,243,245);
-
 }
 
 .sort-cont{
@@ -48,13 +47,13 @@
     align-items: center;
 }
 .image{
-    height: 12rem;
-    width: 12rem;
+    height: 13rem;
+    width: 11rem;
     align-self: center;
 }
 .card h3{
-    max-height: 50px;
-    overflow: hidden;
+    /* max-height: 50px;
+    overflow: hidden; */
     font-weight: bold;
     font-size: 1rem;
     align-self: flex-start;
@@ -146,8 +145,8 @@
         /* margin-right: 1rem; */
     }
     .image{
-        height: 5rem;
-        width: 5rem;
+        height: 6rem;
+        width: 6rem;
     }
     .description{
         max-height: 60px;

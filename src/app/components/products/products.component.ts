@@ -9,8 +9,21 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit{
   constructor(private api: ApiService, private _snackBar: MatSnackBar) {
+    
+  };
+
+  ngOnInit(): void {
+    // this.api.fetchData().subscribe({
+    //   next: (response => {
+    //     this.searchedProductsList = response;
+    //   }),
+    //   error : (error =>{
+    //     console.log(error)
+    //   })
+    // })
+
     this.api.searchInput$.subscribe(input => {
       this.searchInput = input;
     });
@@ -19,7 +32,7 @@ export class ProductsComponent {
       console.log(products, "list in products")
       this.searchedProductsList = products;
     });
-  };
+  }
 
 
   searchedProductsList: any = [];

@@ -1,10 +1,13 @@
-.container {
+.container-fluid {
     display: flex;
-    height: 80vh;
+    height: 100vh;
+    width: 100vw;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    background-image: url("https://www.octaneai.com/hubfs/octaneai_shoppingcart_quiz_digital.png");
+    background-size: cover;
   }
   
   .form_area {
@@ -12,24 +15,29 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #F6F7F8;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.075);
+    /* background-color: #F6F7F8; */
     height: auto;
     width: auto;
-    border: 2px solid #264143;
+    border: 2px solid #e2f8faa4;
     border-radius: 20px;
+    padding: 0 1.5rem 1rem 1.5rem;
+    /* margin-right: 8rem; */
     box-shadow: 3px 4px 0px 1px #7279d6;
   }
   
   .title {
-    color: #264143;
+    color: #ffffff;
     font-weight: 900;
     font-size: 1.5em;
     margin-top: 20px;
   }
   
   .sub_title {
-    font-weight: 600;
+    font-weight: 500;
     margin: 5px 0;
+    color: aliceblue;
   }
   
   .form_group {
@@ -41,8 +49,8 @@
   
   .form_style {
     outline: none;
-    border: 2px solid #264143;
-    box-shadow: 3px 4px 0px 1px #7279d6;
+    border: 2px solid #1d1c1cc9;
+    /* box-shadow: 3px 4px 0px 1px #7279d6; */
     width: 290px;
     padding: 12px 10px;
     border-radius: 4px;
@@ -59,19 +67,53 @@
     margin: 16px 0px;
     width: 290px;
     font-size: 15px;
-    background: #000dc983;
+    /* background: #31adc0b2; */
+    background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+    border: 1px solid #14a2b8dc;
     border-radius: 10px;
     font-weight: 800;
-    box-shadow: 3px 3px 0px 0px #7279d6;
+    /* box-shadow: 3px 3px 0px 0px #7279d6; */
   }
+
+  .btn-signin {
+    font-size: 18px;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+    box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+    padding: 0 2em;
+    border-radius: 0.3em;
+    color: #fff;
+    height: 2.6em;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  
+  .btn-signin:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+    transform: translateY(-0.1em);
+  }
+  
+  .btn-signin:active {
+    box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+    transform: translateY(0em);
+  }
+  
   
   .btn:hover {
     opacity: .9;
   }
+
+  .para{
+    color: #fff;
+  }
   
   .link {
-    font-weight: 800;
-    color: #264143;
+    font-weight: 500;
+    color: #abc7c9;
     padding: 5px;
   }
 

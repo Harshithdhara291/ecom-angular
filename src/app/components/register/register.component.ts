@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./register.component.css']
 })
 
+// register.ts
+
 export class RegisterComponent{
 
   constructor(private http:HttpClient,private _snackBar: MatSnackBar,private router: Router) { }

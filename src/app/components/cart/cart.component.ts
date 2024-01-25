@@ -32,6 +32,10 @@ export class CartComponent implements OnInit {
     },1000)
   }
 
+  updateOrderedItemsArray(): void {
+    this.cartService.updateDataArray(this.cart);
+  }
+
   totalPriceCal() {
     console.log("tpc called")
     this.total = 0;
@@ -40,13 +44,14 @@ export class CartComponent implements OnInit {
     });
   }
 
+
   removeFromCart(itemId: any) {
     this.cartService.removeItemFromCart(itemId)
     this.cartService.fetchCartItems()
-    this.total = 0;
-    this.cart.forEach((each: any) => {
-      this.total += each.price * each.quantity;
-    });
+    // this.total = 0;
+    // this.cart.forEach((each: any) => {
+    //   this.total += each.price * each.quantity;
+    // });
   }
 
   changeQuant(param: string, id: number) {

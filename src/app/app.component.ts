@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { ApiService } from './services/api.service';
 import { AuthService } from './services/auth.service';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './components/dialog/dialog.component';
 
@@ -10,9 +10,15 @@ import { DialogComponent } from './components/dialog/dialog.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  constructor(private cartService:ApiService, private authService: AuthService, private router:Router, private dialog:MatDialog){
+  showNavbar(): boolean {
+    // Determine whether to show the navbar based on the current route
+    const currentRoute = this.router.url;
+    return !['/login', '/register',"/order"].includes(currentRoute);
+  }
+
+  constructor(private cartService:ApiService, private authService: AuthService, private router:Router, private dialog:MatDialog, private route:ActivatedRoute){
   }
 
   searchInput:any=''
@@ -24,23 +30,22 @@ export class AppComponent implements OnInit {
     this.cartService.updateSearchInput(this.searchInput)
   }
 
+  currentRoutePath:any
+
   ngOnInit(): void {
     // this.cartService.getCartItems().subscribe(items => {
     //   this.cart = items;
     //   this.itemsCount=this.cart.length;
     //   console.log(this.cart.length,);
     // });
-    
-    this.cartService.fetchData().subscribe({
-      next: (response => {
-        this.productsList = response;
-        this.searchedProductsList=response;
-        this.updateList(this.searchedProductsList)
-        console.log(this.searchedProductsList,"spl in oninit app comp")
-      }),
-      error : (error =>{
-        console.log(error)
-      })
+
+    console.log("ng OnInIt in app ts")
+    this.cartService.fetchData().subscribe(response => {
+      console.log(response,"list")
+      this.productsList = response;
+      this.searchedProductsList=response;
+      this.updateList(this.searchedProductsList)
+      console.log(this.searchedProductsList,"spl in oninit app comp")
     })
     this.updateList(this.searchedProductsList)
   }
@@ -74,5 +79,7 @@ export class AppComponent implements OnInit {
   openDialog(){
     this.dialog.open(DialogComponent);
   }
+
+
   
 }

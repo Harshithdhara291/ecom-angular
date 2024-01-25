@@ -27,7 +27,7 @@
             </mat-card>
             <mat-card class="total-cont">
                 <h3><b>Grand Total : ₹{{total}}</b></h3>
-                <button mat-raised-button color="primary">Proceed to Buy</button>
+                <a routerLink="/order"><button mat-raised-button color="primary" (click)="updateOrderedItemsArray()" >Proceed to Buy</button></a>
             </mat-card>
         </div>
         </ng-template>

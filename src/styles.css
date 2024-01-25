@@ -4,16 +4,16 @@ html, body { min-height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 /* For Webkit browsers (Chrome, Safari) */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 0px;
-} */
+}
 /* .custom-snackbar {
     background-color: #ff5722 !important; 
     color: blue !important; 
   } */
 
 .mat-mdc-snack-bar-container{
-    --mdc-snackbar-container-color: rgb(0, 13, 201) !important; 
+    /* --mdc-snackbar-container-color: rgb(0, 13, 201) !important;  */
     --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87) !important;
     --mat-snack-bar-button-color: #ffffff !important;
 }

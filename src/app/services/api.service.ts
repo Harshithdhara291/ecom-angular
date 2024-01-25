@@ -89,15 +89,11 @@ export class ApiService{
   }
 
 
-  // getCartItems() {
-  //   return this.cartItems.asObservable();
-  // }
+  private orderedItemsArray = new BehaviorSubject<string[]>([]);
+  dataArray$ = this.orderedItemsArray.asObservable();
 
-  
-  // removeItemFromCart(itemId: string) {
-  //   const currentCart = this.cartItems.value;
-  //   const updatedCart = currentCart.filter((item: any) => item._id !== itemId);
-  //   this.cartItems.next(updatedCart);
-  // }
+  updateDataArray(newArray: string[]): void {
+    this.orderedItemsArray.next(newArray);
+  }
 
 }

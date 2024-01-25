@@ -1,44 +1,29 @@
-<!-- <nav class="shopify-header">
-    <h1><a routerLink="" class="logo">Shopify App</a></h1>
+<div *ngIf="showNavbar()" class="sticky-top">
+ <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-md-top shopify-header px-4">
+    <div class="container">
+      <a class="navbar-brand" routerLink=""><img src="../assets/shopify-app-high-resolution-logo (1).png" alt="logo" class="logo" ></a>
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon "></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  shopify-header-ul">
+            <li *ngIf="isAuthenticated()===false" ><a routerLink="login">Login</a></li>
+            <li><a routerLink="">Home</a></li>
+              <li><a routerLink="products">Products</a></li>
+              <li class="cart-link" *ngIf="isAuthenticated()">
+                <a routerLink="cart">Cart</a>
+                <!-- <p class="items-count" *ngIf="itemsCount > 0">{{ itemsCount }}</p> -->
+              </li>
+              <button mat-raised-button color="warn" (click)="openDialog()" *ngIf="isAuthenticated()" class="logout-btn">Logout</button>
+        </ul>
+          
+      </div>
+      
+    </div>
     <div class="input-container">
       <input type="search" placeholder="Search Products..."  [(ngModel)]="searchInput" (keyup.enter)="searchedProducts()" />
       <button (click)="searchedProducts()" ><mat-icon aria-hidden="false" aria-label="Example search icon" fontIcon="search" class="search-icon"></mat-icon></button>
     </div>
-    <ul>
-      <li *ngIf="isAuthenticated()===false" ><a routerLink="login">Login</a></li>
-      <li><a routerLink="">Home</a></li>
-        <li><a routerLink="products">Products</a></li>
-        <li class="cart-link" *ngIf="isAuthenticated()">
-          <a routerLink="cart">Cart</a>
-          <p class="items-count" *ngIf="itemsCount > 0">{{ itemsCount }}</p>
-        </li>
-        <button mat-raised-button color="warn" (click)="openDialog()" *ngIf="isAuthenticated()">Logout</button>
-    </ul>
-</nav> -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-md-top shopify-header px-4">
-  <div class="container">
-    <a class="navbar-brand" routerLink=""><img src="../assets/shopify-app-high-resolution-logo (1).png" alt="logo" class="logo" ></a>
-    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon "></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0  shopify-header-ul">
-          <li *ngIf="isAuthenticated()===false" ><a routerLink="login">Login</a></li>
-          <li><a routerLink="">Home</a></li>
-            <li><a routerLink="products">Products</a></li>
-            <li class="cart-link" *ngIf="isAuthenticated()">
-              <a routerLink="cart">Cart</a>
-              <p class="items-count" *ngIf="itemsCount > 0">{{ itemsCount }}</p>
-            </li>
-            <button mat-raised-button color="warn" (click)="openDialog()" *ngIf="isAuthenticated()" class="logout-btn">Logout</button>
-      </ul>
-        
-    </div>
-    
-  </div>
-  <div class="input-container">
-    <input type="search" placeholder="Search Products..."  [(ngModel)]="searchInput" (keyup.enter)="searchedProducts()" />
-    <button (click)="searchedProducts()" ><mat-icon aria-hidden="false" aria-label="Example search icon" fontIcon="search" class="search-icon"></mat-icon></button>
-  </div>
-</nav>
+  </nav>
+</div>
 <router-outlet></router-outlet>
