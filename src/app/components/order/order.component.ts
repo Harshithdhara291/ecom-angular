@@ -53,9 +53,6 @@ export class OrderComponent implements OnInit{
   
   if(!form.valid){
     this.openSnackBar("Please fill all the details","close")
-    form.setValue({
-      "fullname":"Harshith Dharavasthu","mobile":"8790149433","streetAddress":"JP colony, Mupkal","city":"Nizamabad","state":"Telangana","postalCode":"503218"
-    })
   }else{
     this.addressArray.push(form.value)
     form.setValue({
