@@ -64,7 +64,7 @@ export class OrderComponent implements OnInit{
   orderPlaced:boolean = false;
 
   addressValues:any={
-    fullname:"Harshith Dharavasthu",mobile:"8790149433",streetAddress:"JP colony, Mupkal",city:"Nizamabad",state:"Telangana",postalCode:"503218"
+    fullname:"lorem ipsum",mobile:0,streetAddress:"Hyderabad",city:"Hyderabad",state:"Telangana",postalCode:"000000"
   };
 
   orderId:any = Math.floor(Math.random() * (9999999 - 1000000 + 1)) + 1000000;
@@ -75,9 +75,9 @@ export class OrderComponent implements OnInit{
 
   getDelDate(){
     let num = Math.floor(Math.random() * (15 - 5 + 1)) + 5;
-  this.oneWeekLater.setDate(this.oneWeekLater.getDate() + num);
-  const formattedDate = this.datePipe.transform(this.oneWeekLater, 'dd MMM yyyy');
-  return formattedDate;
+    this.oneWeekLater.setDate(this.oneWeekLater.getDate() + num);
+    const formattedDate = this.datePipe.transform(this.oneWeekLater, 'dd MMM yyyy');
+    return formattedDate;
   } 
   
   formattedDate:any
@@ -89,12 +89,21 @@ export class OrderComponent implements OnInit{
     this.addressValues = this.addressArray[index]
     this.formattedDate = this.getDelDate()
     console.log(this.formattedDate,"f d")
-    
-    if(this.grandTotal!==0){
+
+    if(this.addressValues===undefined){
+      this.openSnackBar("Please fill the Address","close")
       setTimeout(() => {
         this.placeOrderText = false
+      }, 1000);
+    } 
+    else if(this.grandTotal!==0 && this.addressValues!==undefined){
+      setTimeout(() => {
+        
         this.orderPlaced = !this.orderPlaced
       }, 2000);
+    }else{
+      this.openSnackBar("Something went wrong","close")
+      this.placeOrderText = false
     }
   }
 
